@@ -1,5 +1,3 @@
-#! /usr/bin/python
-
 import sys
 input = sys.stdin.readline
 
@@ -13,6 +11,7 @@ def dfs():
         index[x][0] = cnt
         if not children[x]:
             index[x][1] = cnt
+            leaf_q.append(x)
             continue
         for c in children[x]:
             q.append(c)
